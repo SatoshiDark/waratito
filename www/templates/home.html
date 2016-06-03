@@ -1,0 +1,34 @@
+<ion-view>
+  <ion-content class="home">
+    <div>
+      <p class="home-title center-align">Waratito</p>
+      <p class="home-subtitle center-align"> Compra pues casera, porque aqui waratito es.</p>
+    </div>
+    <div class="card">
+      <div class="item item-body center-align">
+        <p class="home-desc">
+          Este es un prototipo para <a href="#" target="_blank">Waratito</a> Registrate para vender y consultar a los vendedores.
+        </p>
+      </div>
+    </div>
+    <div ng-hide="user === undefined">
+      <div ng-hide="user">
+        <div>
+          <button ui-sref="login" class="button button-full button-balanced bold">Login</button>
+          <button ui-sref="signup" class="button button-full button-positive bold">Signup</button>
+        </div>
+        <div class="center-align">
+          <b class="or">o</b>
+        </div>
+        <div>
+          <button ui-sref="tasks" class="button button-full button-dark bold">Cureosear...</button>
+        </div>
+      </div>
+      <div ng-show="user" ng-controller="AccountController as account">
+        <button ui-sref="tasks" class="button button-full button-dark bold">Mis tareas</button>
+          <button ui-sref="tasksc" class="button button-full button-dark bold">Cureosear...</button>
+        <button ng-click="account.logout()" class="button button-full button-stable bold">Logout</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
